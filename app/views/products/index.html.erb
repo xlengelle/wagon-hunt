@@ -3,7 +3,7 @@
   <h2>Here are our awesome products</h2>
   <ul>
     <% @products.each do |product| %>
-      <li><%= product %></li>
+      <li>Name: <%= product[:name] %>, Category: <%= product[:category] %></li>
     <% end -%>
   </ul>
 </div>

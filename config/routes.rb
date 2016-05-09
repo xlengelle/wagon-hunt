@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   get "/team" => "pages#team"
   get "/contact" => "pages#join_us"
   get "/products" => "products#index"
+
+  # Ajout d'un param dans la route sur la requete products
+  get "/products/:id" => "products#show"
+
+
 end

@@ -15,7 +15,7 @@
           <%= product.name %> - <%= product.url %> | <%= link_to "Voir détail", product_path(product) %><br>
 
           <h6>
-            <%= product.tagline %>
+            <%= product.tagline %> | <%= link_to "Modifier ce produit", edit_product_path(product) %> | <%= link_to "Effacer ce produit", product_path(product), method: :delete %>
           </h6>
 
         </li>

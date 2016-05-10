@@ -1,9 +1,11 @@
 <div class="container text-center">
   <h1>Wagon Hunt - Product List</h1>
   <h2>Here are our awesome products</h2>
-  <ul>
-    <% @products.each do |product| %>
-      <li>Name: <%= product[:name] %>, Category: <%= product[:category] %></li>
-    <% end -%>
-  </ul>
+  <p>
+    <ul class="list text-left">
+      <% @products.each do |product| %>
+        <li>Name: <%= product.name %>, URL: <%= product.url %></li>
+      <% end -%>
+    </ul>
+  </p>
 </div>

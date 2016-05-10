@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+
+
+      <h1 class="text-center">Ajouter un produit</h1>
+
+      <!--
+      <form action="/products" method="post">
+
+          <div class="form-group">
+              <label for="name">- Choisissez un nom de produit -</label>
+
+              <input type="text" class="form-control" name="product[name]" placeholder="Nom du produit" id="name">
+          </div>
+
+          <div class="form-group">
+              <label for="url">- Indiquez l'URL -</label>
+
+              <input type="text" class="form-control" name="product[url]" placeholder="www.monsite.com" id="url">
+          </div>
+
+          <input type="submit" value="Créer" class="btn btn-primary">
+      </form>
+      -->
+
+      <%= simple_form_for @product do |f| %>
+        <%= f.input :name, placeholder: "Kudoz", label: "- Choisissez votre produit -" %>
+        <%= f.input :url, placeholder: "http://getkudoz.com", label: "- Saisissez une URL -" %>
+        <%= f.input :tagline, placeholder: "Le Tinder du recrutement", label: "- Saisissez une tagline -" %>
+        <%= f.button :submit, "Ajouter", class: "btn btn-primary" %>
+
+      <% end %>
+
+
+    </div>
+  </div>
+</div>
+
+
+

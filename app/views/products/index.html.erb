@@ -4,15 +4,23 @@
 
   <p>
   <%= link_to "Revenir à l'accueil", root_path, class: "btn btn-primary" %>
+  <%= link_to "Ajouter un produit", new_product_path, class: "btn btn-success" %>
   </p>
 
   <p>
     <ul class="list text-left">
       <% @products.each do |product| %>
+
         <li>
-          <%= product.name %> - <%= product.url %> | <%= link_to "Voir détail", product_path(product) %>
+          <%= product.name %> - <%= product.url %> | <%= link_to "Voir détail", product_path(product) %><br>
+
+          <h6>
+            <%= product.tagline %>
+          </h6>
+
         </li>
-      <% end -%>
+
+      <% end %>
     </ul>
   </p>
 </div>

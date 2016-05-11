@@ -6,13 +6,7 @@
 
       <h1 class="text-center">Modifier un produit</h1>
 
-      <%= simple_form_for @product do |f| %>
-        <%= f.input :name, placeholder: "Kudoz", label: "- Choisissez votre produit -" %>
-        <%= f.input :url, placeholder: "http://getkudoz.com", label: "- Saisissez une URL -" %>
-        <%= f.input :tagline, placeholder: "Le Tinder du recrutement", label: "- Saisissez une tagline -" %>
-        <%= f.button :submit, "Valider", class: "btn btn-primary" %>
-
-      <% end %>
+     <%= render "form" %>
 
 
     </div>

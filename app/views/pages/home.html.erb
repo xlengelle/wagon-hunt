@@ -1,8 +1,10 @@
-<div class="container text-center">
-  <h1>Wagon Hunt</h1>
-  <h2>Find new awesome products</h2>
 
-  <p>
-    <%= link_to "See the products", products_path, class:"btn btn-success" %>
+<!-- BANNER CENTRALE-->
 
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "background-banner.jpg" %>');">
+  <div class="banner-content">
+    <h1>Wagon Hunt</h1>
+    <p>Find new awesome products</p>
+    <%= link_to "See the products", products_path, class:"btn btn-success btn-lg" %>
+  </div>
 </div>

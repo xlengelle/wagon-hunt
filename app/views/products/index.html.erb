@@ -7,7 +7,6 @@
       <h1 class="text-center">Wagon Hunt - Product List</h1>
       <h2 class="text-center">Here are our awesome products</h2>
 
-
           <% @products.each do |product| %>
 
             <div class="product">
@@ -19,7 +18,7 @@
               class="product-image hidden-xs" alt="<%= product.name %>">
               <div class='product-body'>
                 <h3><%= product.name %></h3>
-                <p><%= product.tagline %></p>
+                <p><%= product.tagline %> <h6><i><%= product.category.name %></i></h6></p>
               </div>
               <ul class="list-inline product-controls hidden-sm hidden-xs">
                 <li>

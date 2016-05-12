@@ -3,7 +3,11 @@ class ProductsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
+    if params[:category_id] == nil
        @products = Product.all
+    else
+      @products = Product.where(category_id: params[:category_id])
+    end
   end
 
   def show
@@ -41,11 +45,13 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :url, :tagline)
+    params.require(:product).permit(:name, :url, :tagline, :category_id)
   end
 
   def find_product
     @product = Product.find(params[:id])
   end
+
+
 
 end

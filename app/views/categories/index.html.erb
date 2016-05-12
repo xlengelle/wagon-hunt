@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+      <h1 class="text-center">Wagon Hunt - Liste des catégories</h1>
+      <h2 class="text-center">Voici les catégories existantes</h2>
+
+      <ul>
+      <% @categories.each do |category| %>
+        <li>
+          <%= category.name  %> |
+              <ul class="list-inline product-controls hidden-sm hidden-xs">
+                <li>
+                  <%= link_to category_path(category) do %>
+                    <i class="fa fa-eye"></i>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to edit_category_path(category) do %>
+                    <i class="fa fa-pencil"></i>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to category_path(category), method: :delete do %>
+                    <i class="fa fa-trash"></i>
+                  <% end %>
+                </li>
+
+              </ul>
+          </li>
+          <% end %>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+

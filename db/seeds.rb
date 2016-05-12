@@ -7,9 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 
+Category.destroy_all
+
+@business = Category.create(name: "Business")
+@lifestyle = Category.create(name: "Lifestyle")
+@entertainment = Category.create(name: "Entertainment")
+
 Product.destroy_all
 
-Product.create(name: "Kudoz", url: "http://www.getkudoz.com", tagline:"Le tinder du recrutement")
-Product.create(name: "Tinder", url: "http://www.tinder.com", tagline:"Le kudoz du dating")
-Product.create(name: "Tatayoyo", url: "http://www.betatayoyo.com", tagline:"I'm no tatayoyo")
-Product.create(name: "USlide", url: "http://www.uslide.com", tagline:"Youtube is not good for education")
+Product.create(name: "Kudoz", url: "http://www.getkudoz.com", tagline:"Le tinder du recrutement", category: @business )
+Product.create(name: "Tinder", url: "http://www.tinder.com", tagline:"Le kudoz du dating", category: @lifestyle)
+Product.create(name: "Tatayoyo", url: "http://www.betatayoyo.com", tagline:"I'm no tatayoyo", category: @entertainment)
+Product.create(name: "USlide", url: "http://www.uslide.com", tagline:"Youtube is not good for education", category: @lifestyle)

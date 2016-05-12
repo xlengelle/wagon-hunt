@@ -15,7 +15,7 @@
   <div class="row">
     <% Category.all.each do |cat| %>
     <div class="col-xs-12 col-sm-3">
-      <%= link_to cat.name, products_path(category_id: cat.id), class: "card_category" %>
+      <%= link_to cat.name, products_path(category_id: cat.id), class: "btn btn-success btn-lg" %>
     </div>
     <% end %>
 

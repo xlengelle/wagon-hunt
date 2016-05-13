@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
 
   def index
     if params[:category_id] == nil
-       @products = Product.all
+       @products = Product.order(created_at: :asc)
     else
       @products = Product.where(category_id: params[:category_id])
     end

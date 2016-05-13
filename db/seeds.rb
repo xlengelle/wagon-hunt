@@ -13,9 +13,14 @@ Category.destroy_all
 @lifestyle = Category.create(name: "Lifestyle")
 @entertainment = Category.create(name: "Entertainment")
 
+User.destroy_all
+
+moi = User.create(email: "lengelle@gmail.com", password: "151080")
+tata = User.create(email: "tata@yoyo.fr", password: "tatayoyo")
+
 Product.destroy_all
 
-Product.create(name: "Kudoz", url: "http://www.getkudoz.com", tagline:"Le tinder du recrutement", category: @business )
-Product.create(name: "Tinder", url: "http://www.tinder.com", tagline:"Le kudoz du dating", category: @lifestyle)
-Product.create(name: "Tatayoyo", url: "http://www.betatayoyo.com", tagline:"I'm no tatayoyo", category: @entertainment)
-Product.create(name: "USlide", url: "http://www.uslide.com", tagline:"Youtube is not good for education", category: @lifestyle)
+Product.create(name: "Kudoz", url: "http://www.getkudoz.com", tagline:"Le tinder du recrutement", category: @business, user: tata)
+Product.create(name: "Tinder", url: "http://www.tinder.com", tagline:"Le kudoz du dating", category: @lifestyle, user: moi)
+Product.create(name: "Tatayoyo", url: "http://www.betatayoyo.com", tagline:"I'm no tatayoyo", category: @entertainment, user: moi)
+Product.create(name: "USlide", url: "http://www.uslide.com", tagline:"Youtube is not good for education", category: @lifestyle, user: tata)

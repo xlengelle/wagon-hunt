@@ -3,6 +3,10 @@
   <div class="banner-content">
     <h1><%= @product.name %></h1>
     <p><%= @product.tagline %> | <%= @product.category.name %></p>
+
+      <% if @product.user != nil %>
+        <h6>Posted by : <%= @product.user.email %></h6>
+      <% end %>
     <%= link_to "See it live !", @product.url, class: "btn btn-primary" %>
   </div>
 </div>
